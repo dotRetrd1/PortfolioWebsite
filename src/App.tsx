@@ -85,7 +85,7 @@ const App: React.FC = () => {
       {/* About Section */}
       <div id="about" className="about-section" data-aos="fade-up">
         <h2>About Me</h2>
-        <p>Hello! I'm Ido Lavion, a passionate individual with a love for creating art, developing games, and engineering innovative solutions. I enjoy tackling new challenges and continuously growing in my fields of expertise. Welcome to my personal portfolio website!</p>
+        <p>Hello! I'm Ido Lavion, A physics/high school student who likes to draw, create video games and do some engineerings.</p>
       </div>
 
       {/* Contact Section */}
@@ -96,7 +96,7 @@ const App: React.FC = () => {
       </div>
 
       <footer>
-        <p>&copy; {new Date().getFullYear()} Ido Lavion. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Ido Lavion. All Rights Reserved ^^.</p>
       </footer>
     </div>
   );
