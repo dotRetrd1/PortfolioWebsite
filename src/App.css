@@ -1,0 +1,407 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background: linear-gradient(135deg, #f7f7f7, #e2e2e2); /* A soft diagonal gradient */
+}
+
+/*  Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sunset Circle Background */
+.sunset-circle {
+  position: absolute;
+  top: 0%; /* Adjust to ensure it’s visible */
+  left: 0%; /* Adjust to ensure it’s visible */
+  width: 70vw;
+  height: 70vw;
+  background: radial-gradient(circle at bottom right, #ffcc00, #ff6600, #ff0000, transparent);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70vh; /* Make the intro section occupy 70% of the viewport height */
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.intro-content {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+  text-align: left;
+  max-width: 600px; /* Increased size */
+  font-size: 5rem; /* Increased text size */
+  margin-right: 50px;
+  letter-spacing: 2px; /* Added spacing between letters */
+}
+
+.intro-content h1 {
+  font-size: 5rem; /* Increased the size of the name */
+  line-height: 1.1;
+  letter-spacing: 3px; /* Added spacing for the name */
+}
+
+.intro-content h2 {
+  font-size: 2.5rem; /* Slightly larger for the "Welcome" */
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.intro-content p {
+  font-size: 1.7rem; /* Slightly larger paragraph text */
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* hamburger menu part */
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001; /* Ensure it's above the sidebar */
+  cursor: pointer;
+}
+
+.hamburger-menu div {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sidebar Menu Styles */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  transform: translateX(-100%); /* Initially off-screen */
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar-menu.open {
+  transform: translateX(0); /* Slide in when menu is open */
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.sidebar-menu li {
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #444;
+}
+
+
+/* PortfolioPage.css */
+.portfolio-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.portfolio-gallery img {
+  width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Button Shadow */
+button, .portfolio-buttons a {
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover, .portfolio-buttons a:hover {
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Box Shadow for Project Items */
+.project-item {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Portfolio Buttons Section */
+.portfolio-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.portfolio-buttons a {
+  background-color: #ff6600; /* Orange color for buttons */
+  color: white; /* Text color */
+  font-size: 18px; /* Larger font size */
+  font-weight: bold;
+  padding: 15px 30px; /* Bigger padding for larger buttons */
+  margin: 10px 0; /* Space between buttons */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center;
+  width: 250px; /* Fixed width for uniformity */
+  transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+  text-decoration: none; /* Remove underline */
+}
+
+.portfolio-buttons a:hover {
+  background-color: #ff9900; /* Darker orange on hover */
+  transform: scale(1.1); /* Slightly enlarge the button when hovered */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.portfolio-buttons a:active {
+  transform: scale(1); /* Reset scale on click */
+}
+
+
+/* Fade-In & Slide-Up Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Projects Section */
+.projects {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 36px;
+  color: #333; /* Dark color for the title */
+  margin-bottom: 20px;
+}
+
+/* Project Item */
+.project-item {
+  display: inline-block; /* Keep projects in a row */
+  margin: 15px; /* Space between projects */
+  width: 500px; /* Fixed width for the project item */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+  text-align: center; /* Center the image horizontally */
+  position: relative;
+  overflow: hidden; /* Hide the overflow when the image scales */
+}
+
+/* Project Image */
+.project-item img {
+  width: 100%; /* Make the image take the full width of the container */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: 100%; /* Prevent image from overflowing */
+  border-radius: 10px; /* Optional: Rounded corners for the images */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling effect */
+  
+  /* Fade effect on both sides with more noticeable fade */
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0.8));
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Make sure gradient stays on top of image */
+}
+
+/* Hover Effect for Project Item */
+.project-item:hover {
+  transform: scale(1.07); /* Slight zoom effect when hovered */
+}
+
+.project-item:hover img {
+  transform: scale(1); /* Remove zoom effect from the image itself */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .project-item {
+    width: 100%; /* Make images full-width on smaller screens */
+    margin: 10px 0; /* Adjust margin for better spacing */
+  }
+}
+
+
+/* About & Contact Section */
+.about-contact-footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.about-section, .contact-section {
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2, .contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-section p, .contact-section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  position: relative;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Make it take up full height on small screens */
+  }
+
+  .intro-content {
+    max-width: 90%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .portfolio-buttons {
+    align-items: center;
+  }
+
+  .portfolio-buttons a {
+    width: 80%;
+  }
+
+  .about-contact-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section, .contact-section {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .project-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .intro h1 {
+    font-size: 3rem;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .cta-btn {
+    padding: 8px 16px;
+  }
+
+  .portfolio-buttons a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

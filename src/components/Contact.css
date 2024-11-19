@@ -1,0 +1,21 @@
+/* src/components/Contact.css */
+.contact {
+  padding: 2rem;
+  background-color: #e9ecef;
+  text-align: center;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-button:hover {
+  background-color: #218838;
+}
