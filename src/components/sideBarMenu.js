@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import './SidebarMenu.css'; // Assuming you have a separate CSS file for the sidebar styling
+const SidebarMenu = ({ isMenuOpen, sidebarRef }) => {
+    return (_jsx("div", { ref: sidebarRef, className: `sidebar-menu ${isMenuOpen ? 'open' : ''}`, onClick: (e) => e.stopPropagation(), children: _jsx("div", { className: "sidebar-content", children: _jsxs("ul", { className: "sidebar-links", children: [_jsx("li", { children: _jsx("a", { href: "#intro", className: "sidebar-link", children: "Home" }) }), _jsx("li", { children: _jsx("a", { href: "#projects", className: "sidebar-link", children: "My Projects" }) }), _jsx("li", { children: _jsx("a", { href: "#about", className: "sidebar-link", children: "About Me" }) }), _jsx("li", { children: _jsx("a", { href: "#contact", className: "sidebar-link", children: "Contact" }) }), _jsx("li", { children: _jsx("a", { href: "/art", className: "sidebar-link", children: "Art Portfolio" }) }), _jsx("li", { children: _jsx("a", { href: "/gamedev", className: "sidebar-link", children: "GameDev Portfolio" }) }), _jsx("li", { children: _jsx("a", { href: "/engineering", className: "sidebar-link", children: "Engineering Portfolio" }) })] }) }) }));
+};
+export default SidebarMenu;
