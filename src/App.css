@@ -181,6 +181,8 @@ body {
 
 .portfolio-gallery img:hover {
   transform: scale(1.05);
+  max-width: 350px;
+  max-height: 300px;
 }
 
 
