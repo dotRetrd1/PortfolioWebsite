@@ -89,14 +89,11 @@ const App: React.FC = () => {
       </div>
 
       {/* About Section */}
-      <div id="about" className="about-section" data-aos="fade-up">
+      <div id="about" className="about-contact-section" data-aos="fade-up">
         <h2>About Me</h2>
         <p>Hello! I'm Ido Lavion, A physics/high school student who likes to draw, create video games and do some engineerings.</p>
-      </div>
-
       {/* Contact Section */}
-      <div id="contact" className="contact-section" data-aos="fade-up">
-        <h2>Contact Me</h2>
+        <h3>Contact Me</h3>
         <p>If you'd like to get in touch, feel free to reach out to me through my contact information below.</p>
         <p>Email: lavionido1@gmail.com</p>
       </div>
