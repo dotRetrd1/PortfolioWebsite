@@ -3,6 +3,7 @@ import './App.css';
 import HamburgerMenu from './components/HamburgerMenu';
 import SidebarMenu from './components/sideBarMenu';
 import DragonWaterArtPortfolioPic from './assets/DragonWaterArtPortfolioPic.jpg';
+import BatteryMeasurePic from './assets/BatteryMeasure.png';
 
 let IsOpen: boolean = false;
 
@@ -77,6 +78,11 @@ const App: React.FC = () => {
         <div className="project-item" data-aos="fade-up" data-aos-delay="300">
           <a href="https://your-art-portfolio-link.com" target="_blank" rel="noopener noreferrer">
             <img src={DragonWaterArtPortfolioPic} alt="Art Portfolio" />
+          </a>
+        </div>
+        <div className="project-item" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://your-art-portfolio-link.com" target="_blank" rel="noopener noreferrer">
+            <img src={BatteryMeasurePic} alt="Art Portfolio" />
           </a>
         </div>
         {/* Add more projects here */}
