@@ -88,7 +88,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* hamburger menu part */
 /* Hamburger Menu Styles */
 .hamburger-menu {
   position: fixed;
@@ -323,13 +322,14 @@ button:hover, .portfolio-buttons a:hover {
   width: 45%;
   padding: 20px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 7px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-section h2, .contact-section h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  margin: 0;
 }
 
 .about-section p, .contact-section p {
