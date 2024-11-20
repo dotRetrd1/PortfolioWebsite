@@ -88,7 +88,10 @@ const App: React.FC = () => {
         {/* Add more projects here */}
       </div>
 
-      {/* About Section */}
+
+
+      <footer>
+				{/* About Section */}
       <div id="about" className="about-contact-section" data-aos="fade-up">
         <h2>About Me</h2>
         <p>Hello! I'm Ido Lavion, A physics/high school student who likes to draw, create video games and do some engineerings.</p>
@@ -98,7 +101,6 @@ const App: React.FC = () => {
         <p>Email: lavionido1@gmail.com</p>
       </div>
 
-      <footer>
         <p>&copy; {new Date().getFullYear()} Ido Lavion. All Rights Reserved ^^.</p>
       </footer>
     </div>
