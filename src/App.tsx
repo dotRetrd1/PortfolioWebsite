@@ -3,7 +3,7 @@ import './App.css';
 import HamburgerMenu from './components/HamburgerMenu';
 import SidebarMenu from './components/sideBarMenu';
 import DragonWaterArtPortfolioPic from './assets/DragonWaterArtPortfolioPic.jpg';
-import BatteryMeasurePic from './assets/BatteryMeasure.png';
+import BatteryMeasurePic from './assets/BatteryMeasure.jpeg';
 
 let IsOpen: boolean = false;
 
