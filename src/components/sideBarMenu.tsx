@@ -22,10 +22,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ isMenuOpen, sidebarRef }) => 
             <a href="#projects" className="sidebar-link">My Projects</a>
           </li>
           <li>
-            <a href="#about" className="sidebar-link">About Me</a>
-          </li>
-          <li>
-            <a href="#contact" className="sidebar-link">Contact</a>
+            <a href="#about" className="sidebar-link">About me / Contact</a>
           </li>
           <li>
             <a href="/art" className="sidebar-link">Art Portfolio</a>
