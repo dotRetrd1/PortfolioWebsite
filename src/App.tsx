@@ -57,39 +57,6 @@ const App: React.FC = () => {
         <SidebarMenu isMenuOpen={isMenuOpen} sidebarRef={sidebarRef} />
       </div>
 
-      {/* Intro Section */}
-      <div className="intro" id="intro">
-        <div className="intro-content" data-aos="fade-up">
-          <h1>Ido Lavion</h1> {/* Your name integrated into the intro */}
-          <h2>Welcome to My Portfolio</h2>
-        </div>
-
-        {/* Portfolio Buttons Section */}
-        <div className="portfolio-buttons" data-aos="fade-up" data-aos-delay="200">
-          <a href="https://your-art-portfolio-link.com" target="_blank" rel="noopener noreferrer">Art Portfolio</a>
-          <a href="https://your-gamedev-portfolio-link.com" target="_blank" rel="noopener noreferrer">GameDev Portfolio</a>
-          <a href="https://your-engineering-portfolio-link.com" target="_blank" rel="noopener noreferrer">Engineering Portfolio</a>
-        </div>
-      </div>
-
-      {/* Projects Section */}
-      <div id="projects" className="projects" data-aos="fade-up">
-        <h2>My Projects</h2>
-        <div className="project-item" data-aos="fade-up" data-aos-delay="300">
-          <a href="https://your-art-portfolio-link.com" target="_blank" rel="noopener noreferrer">
-            <img src={DragonWaterArtPortfolioPic} alt="Art Portfolio" />
-          </a>
-        </div>
-        <div className="project-item" data-aos="fade-up" data-aos-delay="300">
-          <a href="https://your-art-portfolio-link.com" target="_blank" rel="noopener noreferrer">
-            <img src={BatteryMeasurePic} alt="Art Portfolio" />
-          </a>
-        </div>
-        {/* Add more projects here */}
-      </div>
-
-
-
       <footer>
 				{/* About Section */}
       <div id="about" className="about-contact-section" data-aos="fade-up">
