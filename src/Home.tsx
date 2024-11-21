@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import HamburgerMenu from './components/HamburgerMenu'
+import './App.css';
+import HamburgerMenu from './components/HamburgerMenu';
 import SidebarMenu from './components/sideBarMenu';
 import DragonWaterArtPortfolioPic from './assets/DragonWaterArtPortfolioPic.jpg';
+import BatteryMeasurePic from './assets/BatteryMeasure.jpeg';
 
 let IsOpen: boolean = false;
 
@@ -78,24 +80,28 @@ const App: React.FC = () => {
             <img src={DragonWaterArtPortfolioPic} alt="Art Portfolio" />
           </a>
         </div>
+        <div className="project-item" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://your-art-portfolio-link.com" target="_blank" rel="noopener noreferrer">
+            <img src={BatteryMeasurePic} alt="Art Portfolio" />
+          </a>
+        </div>
         {/* Add more projects here */}
       </div>
 
-      {/* About Section */}
-      <div id="about" className="about-section" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>Hello! I'm Ido Lavion, a passionate individual with a love for creating art, developing games, and engineering innovative solutions. I enjoy tackling new challenges and continuously growing in my fields of expertise. Welcome to my personal portfolio website!</p>
-      </div>
 
+
+      <footer>
+				{/* About Section */}
+      <div id="about" className="about-contact-section" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>Hello! I'm Ido Lavion, A physics/high school student who likes to draw, create video games and do some engineerings.</p>
       {/* Contact Section */}
-      <div id="contact" className="contact-section" data-aos="fade-up">
-        <h2>Contact Me</h2>
+        <h3>Contact Me</h3>
         <p>If you'd like to get in touch, feel free to reach out to me through my contact information below.</p>
         <p>Email: lavionido1@gmail.com</p>
       </div>
 
-      <footer>
-        <p>&copy; {new Date().getFullYear()} Ido Lavion. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Ido Lavion. All Rights Reserved ^^.</p>
       </footer>
     </div>
   );
